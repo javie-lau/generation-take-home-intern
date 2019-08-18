@@ -1,3 +1,8 @@
-#map {
-    height: 1000px;
+.mapMex {
+    height: 800px;
+  }
+  .title{
+    background-color: deeppink;
+    color: aliceblue;
+    margin-right: 55rem;
   }

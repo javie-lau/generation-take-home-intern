@@ -6,47 +6,56 @@ class MapMex extends Component{
 
     constructor(props) {
         super(props);
-        this.mapRef = React.createRef();
+        this.mapRef = React.createRef();//creamos referencia para hacer uso de ella mas abajo cuando determinamos el mapa
+        
         this.state = {
             markers: [],
             favorites: []
           }
+          // this.addFavorite = this.addFavorite.bind(this)
 }
-componentDidMount() {
+componentDidMount() {//buscamos el dato de la api y se jecuta despiues de que el elemento sea montado en el dom
     var myLatLng = {lat: 19.4978, lng: -99.1269};
 
-    var map = new window.google.maps.Map(this.mapRef.current, {
+    var map = new window.google.maps.Map(this.mapRef.current, {//se pone current que es atributo de una referencia para ques se vuelva accesible al nodo
+     
       zoom: 10,
       center: myLatLng
     });
-    // /* this.getData() */
-    // console.log(stores)
-    // stores.forEach(element => {
-    //   let marker = new window.google.maps.Marker({
-    //     position: element.Coordinates,
-    //     map: map,
-    //     title: element.Name
-    //   });
+    console.log(map);
+    
+
+    stores.forEach(el => {
+      let markerStore = new window.google.maps.Marker({//marker es una propiedad de maps
+        position: el.Coordinates,
+        map: map,
+        title: el.Name
+      });
+      console.log(markerStore);
       
-    //   this.setState({
-    //     markers: this.state.markers.push({
-    //       position: element.Coordinates,
-    //       address: element.Address,
-    //       name: element.Name
-    //     })
-    //   })
-      
-    // });
-    // console.log(this.state.markers)
+    });
+
+    
+  } 
   
+
   
-}
 render() {
+  
+      
+  
+  
     return (
+      
       <div>
-        <div id="map" ref={this.mapRef}></div>
+        <h1 className="title">Tus tiendas favoritas</h1>
+        <div className="mapMex"  ref={this.mapRef} ></div>
+         
       </div>
+      
+       
     )
+    
   }
 }
 export default MapMex
