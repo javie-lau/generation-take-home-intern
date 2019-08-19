@@ -1,0 +1,152 @@
+[debug] [2019-08-19T20:42:32.913Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:42:32.915Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PANGUI\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-08-19T20:42:32.915Z] CLI Version:   7.2.3
+[debug] [2019-08-19T20:42:32.915Z] Platform:      win32
+[debug] [2019-08-19T20:42:32.915Z] Node Version:  v12.4.0
+[debug] [2019-08-19T20:42:32.916Z] Time:          Mon Aug 19 2019 16:42:32 GMT-0400 (GMT-04:00)
+[debug] [2019-08-19T20:42:32.916Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:42:32.925Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:42:32.926Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:42:32.926Z] [iam] checking project map-mexico-store for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-19T20:42:32.928Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/map-mexico-store:testIamPermissions  
+
+[debug] [2019-08-19T20:42:33.973Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:42:33.978Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/map-mexico-store  
+ 
+[debug] [2019-08-19T20:42:36.321Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'map-mexico-store'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-08-19T20:42:36.331Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/map-mexico-store/versions  
+
+[debug] [2019-08-19T20:42:37.502Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:42:37.502Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-19T20:42:37.667Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 20:42:37 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/map-mexico-store/versions",
+        "path": "/v1beta1/sites/map-mexico-store/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/map-mexico-store/versions"
+      },
+      "method": "POST"
+    }
+  }
+}
+[debug] [2019-08-19T20:45:13.866Z] ----------------------------------------------------------------------
+[debug] [2019-08-19T20:45:13.868Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PANGUI\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-08-19T20:45:13.868Z] CLI Version:   7.2.3
+[debug] [2019-08-19T20:45:13.868Z] Platform:      win32
+[debug] [2019-08-19T20:45:13.868Z] Node Version:  v12.4.0
+[debug] [2019-08-19T20:45:13.869Z] Time:          Mon Aug 19 2019 16:45:13 GMT-0400 (GMT-04:00)
+[debug] [2019-08-19T20:45:13.869Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-19T20:45:13.878Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-19T20:45:13.878Z] > authorizing via signed-in user
+[debug] [2019-08-19T20:45:13.879Z] [iam] checking project map-mexico-store for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-19T20:45:13.880Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/map-mexico-store:testIamPermissions  
+
+[debug] [2019-08-19T20:45:14.936Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-19T20:45:14.938Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/map-mexico-store  
+ 
+[debug] [2019-08-19T20:45:16.011Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'map-mexico-store'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-08-19T20:45:16.016Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/map-mexico-store/versions  
+
+[debug] [2019-08-19T20:45:17.003Z] <<< HTTP RESPONSE 500
+[debug] [2019-08-19T20:45:17.003Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-08-19T20:45:17.189Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Mon, 19 Aug 2019 20:45:16 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/map-mexico-store/versions",
+        "path": "/v1beta1/sites/map-mexico-store/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/map-mexico-store/versions"
+      },
+      "method": "POST"
+    }
+  }
+}

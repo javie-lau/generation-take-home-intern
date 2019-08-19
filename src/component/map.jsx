@@ -56,8 +56,9 @@ class MapMex extends Component {
 
     return (
       <div>
+        <div className="init">
         <h1 className="title">Tus tiendas favoritas</h1>
-
+        </div>
         <Map
           style={mapStyles}
           google={this.props.google}
