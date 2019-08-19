@@ -21,10 +21,9 @@ class YourComponent extends Component {
 }
 
 var divStyle = {
-  border: 'red',
-  borderWidth: 2,
-  borderStyle: 'solid',
-  padding: 20
+ 
+  
+ 
 };
 
 export default YourComponent;

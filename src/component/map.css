@@ -1,8 +1,11 @@
-.mapMex {
-    height: 800px;
-  }
+
   .title{
-    background-color: deeppink;
-    color: aliceblue;
+    background-color: rgb(77, 25, 52);
+    color: rgb(250, 250, 250);
     margin-right: 55rem;
+    text-align: center;
   }
+  .window-info{
+    background-color: rgb(250, 252, 145)
+  }
+  
