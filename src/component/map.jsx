@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import stores from '../store_directory.json'
 import './map.css'
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker,  } from 'google-maps-react';
 
 
 class MapMex extends Component {
@@ -16,49 +16,93 @@ class MapMex extends Component {
       activeMarker: {},
       selectedPlace: {},
       favorites: [],
-      markers: []
+      markers: [],
+      place:[]
+      
     }
-    this.onMarkerClick = this.onMarkerClick.bind(this);
-    this.onMapClick = this.onMapClick.bind(this);
+    
+    // this.onMarkerClick = this.onMarkerClick.bind(this);
+    // this.onMapClick = this.onMapClick.bind(this);
     this.addFavorite = this.addFavorite.bind(this)
 
   }
-  onMarkerClick = (props, marker, e) => {
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true
-    });
-  }
-  onMapClick = (props) => {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
+  // onMarkerClick = (props, marker, e) => {
+  //   this.setState({
+  //     selectedPlace: props,
+  //     activeMarker: marker,
+  //     showingInfoWindow: true
+  //   });
+  // }
+  // onMapClick = (props) => {
+  //   if (this.state.showingInfoWindow) {
+  //     this.setState({
+  //       showingInfoWindow: false,
+  //       activeMarker: null
+  //     });
+  //   }
+  // }
+
+
+  addFavorite(store) {
+    console.log(store);    
+    this.state.favorites.forEach(el => {
+    
+    if(el.Name === store){
+      return
+    
+     }})
+    
+    
+    
+    this.setState({favorites:  this.state.favorites.concat([store]) })
+    
+   alert("tienda agregada exsitosamente")
+    
+    
+    
+  
+    
+   
+    
+    
+    
+    
     }
-  }
 
-
-  addFavorite(stores) {
-    console.log("probando");
-
-  }
+  
 
 
 
 
   render() {
     const mapStyles = {
-      width: '100%',
-      height: '100%',
+      width: '80%',
+      height: '90%',
     };
+    
 
     return (
       <div>
         <div className="init">
+         
         <h1 className="title">Tus tiendas favoritas</h1>
         </div>
+        <div className="favorite">
+                <h1>Tiendas Favoritas</h1>
+                <div className="list">
+                    <p>encuentra tis tiendas aqui</p>
+                   {this.state.favorites.map(el=>{
+                    console.log(el);
+                     return(
+                       <p key={el.name}>tienda{el.name}</p>
+                     )
+                   })}
+                </div>
+                <button type="button" class="btn btn-success">Eliminar</button>
+            </div>
+        
+       <div>
+         
         <Map
           style={mapStyles}
           google={this.props.google}
@@ -75,7 +119,7 @@ class MapMex extends Component {
               })
               return (
                 <Marker
-                  onClick={this.onMarkerClick}
+                  onClick={this.addFavorite}
                   name={el.Name}
                   key={el.Address}
                   position={el.Coordinates}
@@ -86,31 +130,17 @@ class MapMex extends Component {
 
             })
           }
-          <InfoWindow
-            className="window-info"
-            marker={this.state.activeMarker}
-            visible={this.state.showingInfoWindow}
-          // onOpen={e => {
-          //   this.onInfoWindowOpen(this.props)
-          // }}
-          >
-            <div>
-
-              <h1>{this.state.selectedPlace.name}</h1>
-
-              <button className="btn"onClick={this.addFavorite.bind(this)}>agregar a  favoritos</button>
-            </div>
-          </InfoWindow>
+         
 
         </Map>
-      </div>
+        </div>
+        
+       
+        </div>
+        
+       
 
-      // <div>
-      //   <h1 className="title">Tus tiendas favoritas</h1>
-      //   <div className="mapMex"  ref={this.mapRef} ></div>
-      //   <markerStore onClick={this.addFavorite.bind(stores)}/>
-
-      // </div>
+     
 
 
     )

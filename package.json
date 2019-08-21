@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sweetalert/with-react": "^0.1.1",
     "google-maps-react": "^2.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
